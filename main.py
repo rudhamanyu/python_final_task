@@ -55,8 +55,6 @@ for i in range(len(x) - 1):
             direct_up = True
             x_change.append((x[i], 'dir'))
 
-print(x_change)
-
 x_change.append((limit, 'limit'))
 for i in range(len(x_change) - 1):
     cur_x = np.arange(x_change[i][0], x_change[i + 1][0], step)
@@ -66,7 +64,6 @@ for i in range(len(x_change) - 1):
         plt.plot(cur_x, func(cur_x), color)
     else:
         plt.plot(cur_x, func(cur_x), switch_color())
-# plt.plot('go', label=f'Корни')
 
 plt.grid()
 plt.legend()
